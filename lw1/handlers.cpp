@@ -1,5 +1,4 @@
 #include "handlers.h"
-#include "parser.h"
 #include <fstream>
 
 void ReadShapesFromFile(const std::string& inputFileName, std::vector<std::shared_ptr<MathDecorator>>& mathShapes, std::vector<std::shared_ptr<DrawDecorator>>& drawShapes)
@@ -45,7 +44,7 @@ void ShapesMoving(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDeco
 		isMove = false;
 };
 
-void ListenEvents(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDecorator>>& shapes, bool& isMove)
+void ListenEvents(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDecorator>>& shapes, bool& isMove, Toolbar& toolbar)
 {
 	sf::Event event;
 	while (window.pollEvent(event))
@@ -66,6 +65,12 @@ void ListenEvents(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDeco
 					shape->Select(false);
 				}
 			}
+		}
+
+		if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left)
+		{
+			sf::Vector2f mousePosition = sf::Vector2f(event.mouseButton.x, event.mouseButton.y);
+			toolbar.ButtonClick(mousePosition, shapes);
 		}
 
 		if (event.type == sf::Event::KeyPressed && event.key.control && event.key.code == sf::Keyboard::G)

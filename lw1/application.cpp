@@ -1,4 +1,5 @@
 #include "application.h"
+#include "toolbar.h"
 
 std::shared_ptr<Application> Application::m_instance = nullptr;
 
@@ -17,10 +18,13 @@ void Application::Load(const std::string& INPUT_FILE_NAME, const std::string& OU
 
 void Application::Run()
 {
+	Toolbar toolbar;
+	toolbar.LoadButtons();
 	while (m_window.isOpen())
 	{
 		m_window.clear(sf::Color::White);
-		ListenEvents(m_window, m_drawShapes, m_isMove);
+		ListenEvents(m_window, m_drawShapes, m_isMove, toolbar);
+		toolbar.Draw(m_window);
 		DrawShapes(m_window, m_drawShapes);
 		m_window.display();
 	}

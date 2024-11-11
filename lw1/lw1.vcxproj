@@ -131,8 +131,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="addCircleCommand.h" />
+    <ClInclude Include="addRectangleCommand.h" />
+    <ClInclude Include="addTriangleCommand.h" />
     <ClInclude Include="application.h" />
     <ClInclude Include="circle.h" />
+    <ClInclude Include="command.h" />
+    <ClInclude Include="commands.h" />
     <ClInclude Include="drawCircleDecorator.h" />
     <ClInclude Include="drawCompositeShapeDecorator.h" />
     <ClInclude Include="drawDecorator.h" />
@@ -146,6 +151,8 @@
     <ClInclude Include="mathRectangleDecorator.h" />
     <ClInclude Include="mathTriangleDecorator.h" />
     <ClInclude Include="parser.h" />
+    <ClInclude Include="toolbar.h" />
+    <ClInclude Include="toolbarButton.h" />
     <ClInclude Include="triangle.h" />
     <ClInclude Include="shape.h" />
     <ClInclude Include="rectangle.h" />
@@ -163,6 +170,8 @@
     <ClCompile Include="mathTriangleDecorator.cpp" />
     <ClCompile Include="mathRectangleDecorator.cpp" />
     <ClCompile Include="parser.cpp" />
+    <ClCompile Include="toolbar.cpp" />
+    <ClCompile Include="toolbarButton.cpp" />
     <ClCompile Include="triangle.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="rectangle.cpp" />

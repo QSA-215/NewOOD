@@ -9,5 +9,5 @@ struct Point
 class Shape
 {
 public:
-    virtual ~Shape() {}
+    virtual ~Shape() = default;
 };
