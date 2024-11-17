@@ -60,3 +60,13 @@ bool DrawTriangleDecorator::IsCompositeShape() const
 {
     return false;
 };
+
+void DrawTriangleDecorator::Accept(Visitor& visitor)
+{
+    visitor.Visit(*this);
+};
+
+sf::ConvexShape& DrawTriangleDecorator::GetShape()
+{
+    return m_triangle;
+};

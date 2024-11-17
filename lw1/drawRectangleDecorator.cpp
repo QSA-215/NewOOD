@@ -57,3 +57,13 @@ bool DrawRectangleDecorator::IsCompositeShape() const
 {
     return false;
 };
+
+void DrawRectangleDecorator::Accept(Visitor& visitor)
+{
+    visitor.Visit(*this);
+};
+
+sf::RectangleShape& DrawRectangleDecorator::GetShape()
+{
+    return m_rectangle;
+};

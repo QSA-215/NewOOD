@@ -93,6 +93,27 @@
     <ClInclude Include="commands.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="visitor.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="changeFillColorVisitor.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="changeOutlineColorVisitor.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="changeOutlineThicknessVisitor.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="changeFillColorCommand.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="changeOutlineColorCommand.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="changeOutlineThicknessCommand.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -141,6 +162,24 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="toolbar.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="changeFillColorVisitor.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="changeOutlineColorVisitor.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="changeOutlineThicknessVisitor.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="changeOutlineColorCommand.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="changeFillColorCommand.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="changeOutlineThicknessCommand.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
