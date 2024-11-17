@@ -114,6 +114,15 @@
     <ClInclude Include="changeOutlineThicknessCommand.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="caretaker.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="memento.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="undoCommand.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -180,6 +189,15 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="changeOutlineThicknessCommand.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="memento.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="caretaker.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="undoCommand.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

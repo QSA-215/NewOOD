@@ -24,7 +24,7 @@ void DrawShapes(sf::RenderWindow& window, const std::vector<std::shared_ptr<Draw
 		shape->Draw(window);
 };
 
-void ShapesMoving(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDecorator>>& shapes, bool& isMove)
+void ShapesMoving(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDecorator>>& shapes, bool& isMove, Caretaker& caretaker)
 {
 	static sf::Vector2i lastMousePosition;
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
@@ -41,10 +41,12 @@ void ShapesMoving(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDeco
 		lastMousePosition = currentPosition;
 	}
 	else
+	{
 		isMove = false;
+	}
 };
 
-void ListenEvents(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDecorator>>& shapes, bool& isMove, Toolbar& toolbar)
+void ListenEvents(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDecorator>>& shapes, bool& isMove, Toolbar& toolbar, Caretaker& caretaker)
 {
 	sf::Event event;
 	while (window.pollEvent(event))
@@ -70,11 +72,12 @@ void ListenEvents(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDeco
 		if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left)
 		{
 			sf::Vector2f mousePosition = sf::Vector2f(event.mouseButton.x, event.mouseButton.y);
-			toolbar.ButtonClick(mousePosition, shapes);
+			toolbar.ButtonClick(mousePosition, shapes, caretaker);
 		}
 
 		if (event.type == sf::Event::KeyPressed && event.key.control && event.key.code == sf::Keyboard::G)
 		{
+			caretaker.Save(std::make_shared<Memento>(shapes));
 			std::shared_ptr<DrawCompositeShapeDecorator> compositeShape = std::make_shared<DrawCompositeShapeDecorator>();
 			std::vector<int> tempShapes;
 			for (int i = 0; i < shapes.size(); i++)
@@ -99,6 +102,7 @@ void ListenEvents(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDeco
 
 		if (event.type == sf::Event::KeyPressed && event.key.control && event.key.code == sf::Keyboard::U)
 		{
+			caretaker.Save(std::make_shared<Memento>(shapes));
 			for (int i = 0; i < shapes.size(); i++)
 			{
 				if (shapes[i]->IsSelected() && shapes[i]->IsCompositeShape())
@@ -118,6 +122,6 @@ void ListenEvents(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDeco
 				}
 			}
 		}
-		ShapesMoving(window, shapes, isMove);
+		ShapesMoving(window, shapes, isMove, caretaker);
 	}
 };

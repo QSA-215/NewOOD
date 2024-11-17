@@ -6,5 +6,5 @@ void ReadShapesFromFile(const std::string& inputFileName, std::vector<std::share
 void WriteResultsInFile(const std::string& outputFileName, const std::vector<std::shared_ptr<MathDecorator>>& mathShapes);
 
 void DrawShapes(sf::RenderWindow& window, const std::vector<std::shared_ptr<DrawDecorator>>& shapes);
-void ShapesMoving(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDecorator>>& shapes, bool& isMove);
-void ListenEvents(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDecorator>>& shapes, bool& isMove, Toolbar& toolbar);
+void ShapesMoving(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDecorator>>& shapes, bool& isMove, Caretaker& caretaker);
+void ListenEvents(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDecorator>>& shapes, bool& isMove, Toolbar& toolbar, Caretaker& caretaker);

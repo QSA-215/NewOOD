@@ -13,6 +13,9 @@ public:
 	void Run();
 	static std::shared_ptr<Application> GetInstance();
 
+	std::shared_ptr<Memento> Save();
+	void Undo();// const std::shared_ptr<Memento>& state);
+
 private:
 	static std::shared_ptr<Application> m_instance;
 	//sf::ContextSettings m_windowSettings;
@@ -20,4 +23,6 @@ private:
 	std::vector<std::shared_ptr<MathDecorator>> m_mathShapes;
 	std::vector<std::shared_ptr<DrawDecorator>> m_drawShapes;
 	bool m_isMove = false;
+
+	Caretaker m_caretaker;
 };

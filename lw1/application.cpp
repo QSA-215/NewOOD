@@ -23,7 +23,7 @@ void Application::Run()
 	while (m_window.isOpen())
 	{
 		m_window.clear(sf::Color::White);
-		ListenEvents(m_window, m_drawShapes, m_isMove, toolbar);
+		ListenEvents(m_window, m_drawShapes, m_isMove, toolbar, m_caretaker);
 		toolbar.Draw(m_window);
 		DrawShapes(m_window, m_drawShapes);
 		m_window.display();
@@ -35,4 +35,15 @@ std::shared_ptr<Application> Application::GetInstance()
 	if (!m_instance)
 		m_instance = std::shared_ptr<Application>(new Application());
 	return m_instance;
+};
+
+std::shared_ptr<Memento> Application::Save()
+{
+	return std::make_shared<Memento>(m_drawShapes);
+};
+
+void Application::Undo()// const std::shared_ptr<Memento>& state)
+{
+	if (m_caretaker.CanUndo())
+		m_drawShapes = m_caretaker.Undo()->GetState();
 };

@@ -5,3 +5,4 @@
 #include "changeFillColorCommand.h"
 #include "changeOutlineColorCommand.h"
 #include "changeOutlineThicknessCommand.h"
+#include "undoCommand.h"

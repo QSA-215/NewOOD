@@ -139,6 +139,7 @@
     <ClInclude Include="addRectangleCommand.h" />
     <ClInclude Include="addTriangleCommand.h" />
     <ClInclude Include="application.h" />
+    <ClInclude Include="caretaker.h" />
     <ClInclude Include="changeFillColorCommand.h" />
     <ClInclude Include="changeFillColorVisitor.h" />
     <ClInclude Include="changeOutlineColorCommand.h" />
@@ -159,6 +160,7 @@
     <ClInclude Include="mathDecorators.h" />
     <ClInclude Include="mathRectangleDecorator.h" />
     <ClInclude Include="mathTriangleDecorator.h" />
+    <ClInclude Include="memento.h" />
     <ClInclude Include="parser.h" />
     <ClInclude Include="changeOutlineColorVisitor.h" />
     <ClInclude Include="toolbar.h" />
@@ -167,10 +169,12 @@
     <ClInclude Include="shape.h" />
     <ClInclude Include="rectangle.h" />
     <ClInclude Include="shapes.h" />
+    <ClInclude Include="undoCommand.h" />
     <ClInclude Include="visitor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="application.cpp" />
+    <ClCompile Include="caretaker.cpp" />
     <ClCompile Include="changeFillColorCommand.cpp" />
     <ClCompile Include="changeFillColorVisitor.cpp" />
     <ClCompile Include="changeOutlineColorCommand.cpp" />
@@ -186,12 +190,14 @@
     <ClCompile Include="mathCircleDecorator.cpp" />
     <ClCompile Include="mathTriangleDecorator.cpp" />
     <ClCompile Include="mathRectangleDecorator.cpp" />
+    <ClCompile Include="memento.cpp" />
     <ClCompile Include="parser.cpp" />
     <ClCompile Include="toolbar.cpp" />
     <ClCompile Include="toolbarButton.cpp" />
     <ClCompile Include="triangle.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="rectangle.cpp" />
+    <ClCompile Include="undoCommand.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
