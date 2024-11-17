@@ -57,3 +57,13 @@ bool DrawCircleDecorator::IsCompositeShape() const
 {
     return false;
 };
+
+void DrawCircleDecorator::Accept(Visitor& visitor)
+{
+    visitor.Visit(*this);
+};
+
+sf::CircleShape& DrawCircleDecorator::GetShape()
+{
+    return m_circle;
+};

@@ -1,2 +1,59 @@
-﻿  toolbarButton.cpp
+﻿  toolbar.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(392,75): warning C4244: аргумент: преобразование "_Ty" в "float", возможна потеря данных
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(392,75): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(392,75): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(392,75): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(392,75): warning C4244:         ]
+  (компиляция исходного файла "toolbar.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(392,75):
+      контекст создания экземпляра шаблона (сначала самый старый)
+          D:\1`University\OOD2\lw1\lw1\toolbar.cpp(15,85):
+          выполняется компиляция ссылки на экземпляр шаблон функции "std::shared_ptr<ChangeOutlineThicknessCommand> std::make_shared<ChangeOutlineThicknessCommand,int>(int &&)"
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\memory(2906,46):
+          выполняется компиляция ссылки на экземпляр шаблон функции "std::_Ref_count_obj2<ChangeOutlineThicknessCommand>::_Ref_count_obj2<_Ty>(_Ty &&)"
+          with
+          [
+              _Ty=int
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\memory(2095,18):
+          выполняется компиляция ссылки на экземпляр шаблон функции "void std::_Construct_in_place<_Ty,int>(_Ty &,int &&) noexcept(false)"
+          with
+          [
+              _Ty=ChangeOutlineThicknessCommand
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(402,14):
+          выполняется компиляция ссылки на экземпляр шаблон функции "_Ty *std::construct_at<_Ty,int>(_Ty *const ,int &&) noexcept(<expr>)"
+          with
+          [
+              _Ty=ChangeOutlineThicknessCommand
+          ]
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(406,82): warning C4244: аргумент: преобразование "_Ty" в "float", возможна потеря данных
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(406,82): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(406,82): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(406,82): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(406,82): warning C4244:         ]
+  (компиляция исходного файла "toolbar.cpp")
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(393,90): warning C4244: аргумент: преобразование "_Ty" в "float", возможна потеря данных
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(393,90): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(393,90): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(393,90): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(393,90): warning C4244:         ]
+  (компиляция исходного файла "toolbar.cpp")
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(393,90):
+      контекст создания экземпляра шаблона (сначала самый старый)
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\memory(2095,18):
+          выполняется компиляция ссылки на экземпляр шаблон функции "void std::_Construct_in_place<_Ty,int>(_Ty &,int &&) noexcept(false)"
+          with
+          [
+              _Ty=ChangeOutlineThicknessCommand
+          ]
+          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\xutility(402,14):
+          выполняется компиляция ссылки на экземпляр шаблон функции "_Ty *std::construct_at<_Ty,int>(_Ty *const ,int &&) noexcept(false)"
+          with
+          [
+              _Ty=ChangeOutlineThicknessCommand
+          ]
+  
   lw1.vcxproj -> D:\1`University\OOD2\lw1\x64\Debug\lw1.exe

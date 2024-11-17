@@ -1,7 +1,8 @@
 #pragma once
-#include <SFML/Graphics.hpp>
 #include "shape.h"
+#include <SFML/Graphics.hpp>
 #include <memory>
+#include "visitor.h"
 
 class DrawDecorator : public Shape
 {
@@ -15,4 +16,6 @@ public:
 	virtual bool Contains(const sf::Vector2f& point) const = 0;
 	virtual bool IsSelected() const = 0;
 	virtual bool IsCompositeShape() const = 0;
+
+	virtual void Accept(Visitor& visitor) = 0;
 };

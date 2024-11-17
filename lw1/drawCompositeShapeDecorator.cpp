@@ -102,3 +102,8 @@ bool DrawCompositeShapeDecorator::IsCompositeShape() const
 {
     return true;
 };
+
+void DrawCompositeShapeDecorator::Accept(Visitor& visitor)
+{
+    visitor.Visit(*this);
+};

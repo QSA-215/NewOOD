@@ -1,4 +1,10 @@
 D:\1`University\OOD2\lw1\lw1\application.cpp;D:\1`University\OOD2\lw1\lw1\x64\Debug\application.obj
+D:\1`University\OOD2\lw1\lw1\changeFillColorCommand.cpp;D:\1`University\OOD2\lw1\lw1\x64\Debug\changeFillColorCommand.obj
+D:\1`University\OOD2\lw1\lw1\changeFillColorVisitor.cpp;D:\1`University\OOD2\lw1\lw1\x64\Debug\changeFillColorVisitor.obj
+D:\1`University\OOD2\lw1\lw1\changeOutlineColorCommand.cpp;D:\1`University\OOD2\lw1\lw1\x64\Debug\changeOutlineColorCommand.obj
+D:\1`University\OOD2\lw1\lw1\changeOutlineColorVisitor.cpp;D:\1`University\OOD2\lw1\lw1\x64\Debug\changeOutlineColorVisitor.obj
+D:\1`University\OOD2\lw1\lw1\changeOutlineThicknessCommand.cpp;D:\1`University\OOD2\lw1\lw1\x64\Debug\changeOutlineThicknessCommand.obj
+D:\1`University\OOD2\lw1\lw1\changeOutlineThicknessVisitor.cpp;D:\1`University\OOD2\lw1\lw1\x64\Debug\changeOutlineThicknessVisitor.obj
 D:\1`University\OOD2\lw1\lw1\circle.cpp;D:\1`University\OOD2\lw1\lw1\x64\Debug\circle.obj
 D:\1`University\OOD2\lw1\lw1\drawCircleDecorator.cpp;D:\1`University\OOD2\lw1\lw1\x64\Debug\drawCircleDecorator.obj
 D:\1`University\OOD2\lw1\lw1\drawCompositeShapeDecorator.cpp;D:\1`University\OOD2\lw1\lw1\x64\Debug\drawCompositeShapeDecorator.obj

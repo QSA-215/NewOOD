@@ -16,6 +16,9 @@ public:
 	bool IsSelected() const override;
 	bool IsCompositeShape() const override;
 
+	void Accept(Visitor& visitor) override;
+	sf::CircleShape& GetShape();
+
 private:
 	sf::CircleShape m_circle;
 	sf::RectangleShape m_frame;

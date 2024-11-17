@@ -20,6 +20,8 @@ public:
 	bool IsSelected() const override;
 	bool IsCompositeShape() const override;
 
+	void Accept(Visitor& visitor) override;
+
 private:
 	std::vector<std::shared_ptr<DrawDecorator>> m_compositeShape;
 	sf::RectangleShape m_frame;
