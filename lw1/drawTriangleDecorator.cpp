@@ -70,3 +70,22 @@ sf::ConvexShape& DrawTriangleDecorator::GetShape()
 {
     return m_triangle;
 };
+
+std::shared_ptr<DrawDecorator> DrawTriangleDecorator::Clone() const
+{
+    return std::make_shared<DrawTriangleDecorator>(*this);
+};
+
+std::string DrawTriangleDecorator::GetInfo() const
+{
+    return "triangle " +
+        std::to_string(m_triangle.getPoint(0).x) + " " +
+        std::to_string(m_triangle.getPoint(0).y) + " " +
+        std::to_string(m_triangle.getPoint(1).x) + " " +
+        std::to_string(m_triangle.getPoint(1).y) + " " +
+        std::to_string(m_triangle.getPoint(2).x) + " " +
+        std::to_string(m_triangle.getPoint(2).y) + " " +
+        std::to_string(m_triangle.getFillColor().toInteger()) + " " +
+        std::to_string(m_triangle.getOutlineThickness()) + " " +
+        std::to_string(m_triangle.getOutlineColor().toInteger());
+};

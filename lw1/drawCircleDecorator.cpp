@@ -67,3 +67,19 @@ sf::CircleShape& DrawCircleDecorator::GetShape()
 {
     return m_circle;
 };
+
+std::shared_ptr<DrawDecorator> DrawCircleDecorator::Clone() const
+{
+    return std::make_shared<DrawCircleDecorator>(*this);
+};
+
+std::string DrawCircleDecorator::GetInfo() const
+{
+    return "circle " +
+        std::to_string(m_circle.getPosition().x) + " " +
+        std::to_string(m_circle.getPosition().y) + " " +
+        std::to_string(m_circle.getRadius()) + " " +
+        std::to_string(m_circle.getFillColor().toInteger()) + " " +
+        std::to_string(m_circle.getOutlineThickness()) + " " +
+        std::to_string(m_circle.getOutlineColor().toInteger());
+};

@@ -67,3 +67,20 @@ sf::RectangleShape& DrawRectangleDecorator::GetShape()
 {
     return m_rectangle;
 };
+
+std::shared_ptr<DrawDecorator> DrawRectangleDecorator::Clone() const
+{
+    return std::make_shared<DrawRectangleDecorator>(*this);
+};
+
+std::string DrawRectangleDecorator::GetInfo() const
+{
+    return "rectangle " +
+        std::to_string(m_rectangle.getPosition().x) + " " +
+        std::to_string(m_rectangle.getPosition().y) + " " +
+        std::to_string(m_rectangle.getSize().x) + " " +
+        std::to_string(m_rectangle.getSize().y) + " " +
+        std::to_string(m_rectangle.getFillColor().toInteger()) + " " +
+        std::to_string(m_rectangle.getOutlineThickness()) + " " +
+        std::to_string(m_rectangle.getOutlineColor().toInteger());
+};

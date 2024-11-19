@@ -18,4 +18,8 @@ public:
 	virtual bool IsCompositeShape() const = 0;
 
 	virtual void Accept(Visitor& visitor) = 0;
+
+	virtual std::shared_ptr<DrawDecorator> Clone() const = 0;
+
+	virtual std::string GetInfo() const = 0;
 };

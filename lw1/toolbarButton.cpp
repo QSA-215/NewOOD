@@ -17,7 +17,7 @@ ToolbarButton::ToolbarButton(const sf::Vector2f& position, const sf::Color& colo
     }
 
     m_label.setFont(font);
-    m_label.setString(sf::String("text"));
+    m_label.setString(text);
     m_label.setCharacterSize(BUTTON_FONT_SIZE);
     m_label.setFillColor(sf::Color::Black);
     m_label.setPosition(position.x + 10, position.y + 10);

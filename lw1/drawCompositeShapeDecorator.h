@@ -22,6 +22,10 @@ public:
 
 	void Accept(Visitor& visitor) override;
 
+	std::shared_ptr<DrawDecorator> Clone() const override;
+
+	std::string GetInfo() const override;
+
 private:
 	std::vector<std::shared_ptr<DrawDecorator>> m_compositeShape;
 	sf::RectangleShape m_frame;

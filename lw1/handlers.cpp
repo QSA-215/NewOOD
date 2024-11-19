@@ -24,7 +24,7 @@ void DrawShapes(sf::RenderWindow& window, const std::vector<std::shared_ptr<Draw
 		shape->Draw(window);
 };
 
-void ShapesMoving(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDecorator>>& shapes, bool& isMove, Caretaker& caretaker)
+void ShapesMoving(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDecorator>>& shapes, bool& isMove, Caretaker& caretaker, Toolbar& toolbar)
 {
 	static sf::Vector2i lastMousePosition;
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
@@ -33,6 +33,8 @@ void ShapesMoving(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDeco
 		{
 			isMove = true;
 			lastMousePosition = sf::Mouse::getPosition(window);
+			if (!toolbar.ButtonsContains(sf::Vector2f(lastMousePosition.x, lastMousePosition.y)))
+				caretaker.Save(std::make_shared<Memento>(shapes));
 		}
 		sf::Vector2i currentPosition = sf::Mouse::getPosition(window);
 		for (auto shape : shapes)
@@ -122,6 +124,6 @@ void ListenEvents(sf::RenderWindow& window, std::vector<std::shared_ptr<DrawDeco
 				}
 			}
 		}
-		ShapesMoving(window, shapes, isMove, caretaker);
+		ShapesMoving(window, shapes, isMove, caretaker, toolbar);
 	}
 };

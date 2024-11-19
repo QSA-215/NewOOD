@@ -16,6 +16,7 @@ void Toolbar::LoadButtons()
     m_buttons.push_back(ToolbarButton({ 610, 10 }, sf::Color::Black, "Thic 3", std::make_shared<ChangeOutlineThicknessCommand>(3)));
     m_buttons.push_back(ToolbarButton({ 670, 10 }, sf::Color::Black, "Thic 5", std::make_shared<ChangeOutlineThicknessCommand>(5)));
     m_buttons.push_back(ToolbarButton({ 730, 10 }, sf::Color::Yellow, "Undo", std::make_shared<UndoCommand>()));
+    m_buttons.push_back(ToolbarButton({ 790, 10 }, sf::Color::Cyan, "Save", std::make_shared<SaveToFileCommand>("shapesSave.txt")));
 };
 
 void Toolbar::ButtonClick(const sf::Vector2f& point, std::vector<std::shared_ptr<DrawDecorator>>& shapes, Caretaker& caretaker)
@@ -30,7 +31,7 @@ void Toolbar::ButtonClick(const sf::Vector2f& point, std::vector<std::shared_ptr
             break;
         }
     }
-}
+};
 
 void Toolbar::Draw(sf::RenderWindow& window)
 {
@@ -38,4 +39,17 @@ void Toolbar::Draw(sf::RenderWindow& window)
     {
         button.Draw(window);
     }
-}
+};
+
+
+bool Toolbar::ButtonsContains(const sf::Vector2f& point)
+{
+    for (auto button : m_buttons)
+    {
+        if (button.Contains(point))
+        {
+            return true;
+        }
+    }
+    return false;
+};

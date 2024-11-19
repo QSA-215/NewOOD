@@ -107,3 +107,23 @@ void DrawCompositeShapeDecorator::Accept(Visitor& visitor)
 {
     visitor.Visit(*this);
 };
+
+std::shared_ptr<DrawDecorator> DrawCompositeShapeDecorator::Clone() const
+{
+    auto newGroup = std::make_shared<DrawCompositeShapeDecorator>();
+
+    for (const auto& shape : m_compositeShape) {
+        newGroup->AddShape(shape->Clone());
+    }
+    return newGroup;
+};
+
+std::string DrawCompositeShapeDecorator::GetInfo() const
+{
+    std::string output;
+    output += "(\n";
+    for (auto shape : m_compositeShape)
+        output += shape->GetInfo() + "\n";
+    output += ")";
+    return output;
+};

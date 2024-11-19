@@ -19,6 +19,10 @@ public:
 	void Accept(Visitor& visitor) override;
 	sf::CircleShape& GetShape();
 
+	std::shared_ptr<DrawDecorator> Clone() const override;
+
+	std::string GetInfo() const override;
+
 private:
 	sf::CircleShape m_circle;
 	sf::RectangleShape m_frame;

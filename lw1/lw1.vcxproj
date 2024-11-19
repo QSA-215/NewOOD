@@ -163,6 +163,10 @@
     <ClInclude Include="memento.h" />
     <ClInclude Include="parser.h" />
     <ClInclude Include="changeOutlineColorVisitor.h" />
+    <ClInclude Include="saveContext.h" />
+    <ClInclude Include="saveStrategy.h" />
+    <ClInclude Include="saveTofileCommand.h" />
+    <ClInclude Include="saveToTextStrategy.h" />
     <ClInclude Include="toolbar.h" />
     <ClInclude Include="toolbarButton.h" />
     <ClInclude Include="triangle.h" />
@@ -192,6 +196,9 @@
     <ClCompile Include="mathRectangleDecorator.cpp" />
     <ClCompile Include="memento.cpp" />
     <ClCompile Include="parser.cpp" />
+    <ClCompile Include="SaveContext.cpp" />
+    <ClCompile Include="saveToFileCommand.cpp" />
+    <ClCompile Include="saveToTextStrategy.cpp" />
     <ClCompile Include="toolbar.cpp" />
     <ClCompile Include="toolbarButton.cpp" />
     <ClCompile Include="triangle.cpp" />

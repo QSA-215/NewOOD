@@ -6,3 +6,4 @@
 #include "changeOutlineColorCommand.h"
 #include "changeOutlineThicknessCommand.h"
 #include "undoCommand.h"
+#include "saveToFileCommand.h"

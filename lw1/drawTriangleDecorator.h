@@ -19,6 +19,10 @@ public:
 	void Accept(Visitor& visitor) override;
 	sf::ConvexShape& GetShape();
 
+	std::shared_ptr<DrawDecorator> Clone() const override;
+
+	std::string GetInfo() const override;
+
 private:
 	sf::ConvexShape m_triangle;
 	sf::RectangleShape m_frame;
